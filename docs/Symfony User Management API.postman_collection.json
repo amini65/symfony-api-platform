@@ -1,0 +1,246 @@
+{
+	"info": {
+		"_postman_id": "069e814a-b40c-4351-8407-8b71d80af28f",
+		"name": "Symfony User Management API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10051784"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "List Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MzM3MzEwMjMsImV4cCI6MTczMzczNDYyMywicm9sZXMiOlsiUk9MRV9TVVBFUl9BRE1JTiJdLCJ1c2VybmFtZSI6ImZvc3Rlcjc0QGV4YW1wbGUuY29tIn0.i227s9K2Dm4k6CtMeJ3e5zWB1gLzSsMB1oH3wAkIP1j0HZWuY62QvkH1SGiCqjFbufwRVNSLO-pcOCdQKSLZo7UDla4KlpxWmR-xpsBhUyLfXfoYHLoX6AhhGg7Aa6M1GOI_1pWnCKRFc9ZxbF4zptpAIIm0WVaZlQXB4P4pEKun5y4EniiRCBWJBkbFOZYeemqCS8DgHke_mDlYHnRJNqRJn4fdI6mc2BAOig0umBw56VSpQZGk_OJXuVopGngw-sUPAbm9aFDm_uu_Drf0ks3HGzUzT4JUN6OGlPLxz827sSwzftzeuqZoO6Tz50BBeg6cD5U1rABpUJw7Ip-0ww",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer <token>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/v1/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MzM3MzEwMjMsImV4cCI6MTczMzczNDYyMywicm9sZXMiOlsiUk9MRV9TVVBFUl9BRE1JTiJdLCJ1c2VybmFtZSI6ImZvc3Rlcjc0QGV4YW1wbGUuY29tIn0.i227s9K2Dm4k6CtMeJ3e5zWB1gLzSsMB1oH3wAkIP1j0HZWuY62QvkH1SGiCqjFbufwRVNSLO-pcOCdQKSLZo7UDla4KlpxWmR-xpsBhUyLfXfoYHLoX6AhhGg7Aa6M1GOI_1pWnCKRFc9ZxbF4zptpAIIm0WVaZlQXB4P4pEKun5y4EniiRCBWJBkbFOZYeemqCS8DgHke_mDlYHnRJNqRJn4fdI6mc2BAOig0umBw56VSpQZGk_OJXuVopGngw-sUPAbm9aFDm_uu_Drf0ks3HGzUzT4JUN6OGlPLxz827sSwzftzeuqZoO6Tz50BBeg6cD5U1rABpUJw7Ip-0ww",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer <token>",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"info@aa.com\",\n  \"name\": \"John Doe\",\n  \"password\": \"12345678\",\n  \"role\": \"ROLE_USER\",\n  \"company_id\": 717\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MzM3MzEwMjMsImV4cCI6MTczMzczNDYyMywicm9sZXMiOlsiUk9MRV9TVVBFUl9BRE1JTiJdLCJ1c2VybmFtZSI6ImZvc3Rlcjc0QGV4YW1wbGUuY29tIn0.i227s9K2Dm4k6CtMeJ3e5zWB1gLzSsMB1oH3wAkIP1j0HZWuY62QvkH1SGiCqjFbufwRVNSLO-pcOCdQKSLZo7UDla4KlpxWmR-xpsBhUyLfXfoYHLoX6AhhGg7Aa6M1GOI_1pWnCKRFc9ZxbF4zptpAIIm0WVaZlQXB4P4pEKun5y4EniiRCBWJBkbFOZYeemqCS8DgHke_mDlYHnRJNqRJn4fdI6mc2BAOig0umBw56VSpQZGk_OJXuVopGngw-sUPAbm9aFDm_uu_Drf0ks3HGzUzT4JUN6OGlPLxz827sSwzftzeuqZoO6Tz50BBeg6cD5U1rABpUJw7Ip-0ww",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer <token>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/v1/users/55",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"55"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Companies",
+			"item": [
+				{
+					"name": "List Companies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MzM3MzEwMjMsImV4cCI6MTczMzczNDYyMywicm9sZXMiOlsiUk9MRV9TVVBFUl9BRE1JTiJdLCJ1c2VybmFtZSI6ImZvc3Rlcjc0QGV4YW1wbGUuY29tIn0.i227s9K2Dm4k6CtMeJ3e5zWB1gLzSsMB1oH3wAkIP1j0HZWuY62QvkH1SGiCqjFbufwRVNSLO-pcOCdQKSLZo7UDla4KlpxWmR-xpsBhUyLfXfoYHLoX6AhhGg7Aa6M1GOI_1pWnCKRFc9ZxbF4zptpAIIm0WVaZlQXB4P4pEKun5y4EniiRCBWJBkbFOZYeemqCS8DgHke_mDlYHnRJNqRJn4fdI6mc2BAOig0umBw56VSpQZGk_OJXuVopGngw-sUPAbm9aFDm_uu_Drf0ks3HGzUzT4JUN6OGlPLxz827sSwzftzeuqZoO6Tz50BBeg6cD5U1rABpUJw7Ip-0ww",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer <token>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/v1/companies",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Company",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MzM3MzEwMjMsImV4cCI6MTczMzczNDYyMywicm9sZXMiOlsiUk9MRV9TVVBFUl9BRE1JTiJdLCJ1c2VybmFtZSI6ImZvc3Rlcjc0QGV4YW1wbGUuY29tIn0.i227s9K2Dm4k6CtMeJ3e5zWB1gLzSsMB1oH3wAkIP1j0HZWuY62QvkH1SGiCqjFbufwRVNSLO-pcOCdQKSLZo7UDla4KlpxWmR-xpsBhUyLfXfoYHLoX6AhhGg7Aa6M1GOI_1pWnCKRFc9ZxbF4zptpAIIm0WVaZlQXB4P4pEKun5y4EniiRCBWJBkbFOZYeemqCS8DgHke_mDlYHnRJNqRJn4fdI6mc2BAOig0umBw56VSpQZGk_OJXuVopGngw-sUPAbm9aFDm_uu_Drf0ks3HGzUzT4JUN6OGlPLxz827sSwzftzeuqZoO6Tz50BBeg6cD5U1rABpUJw7Ip-0ww",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer <token>",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Example Company\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/companies",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"companies"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"foster74@example.com\",\n    \"password\": \"12345678\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/login",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8000"
+		}
+	]
+}
